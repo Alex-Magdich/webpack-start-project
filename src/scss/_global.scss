@@ -1,0 +1,262 @@
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+	font-size: 18px;
+	// ------------media-------------
+	@include w($sm){
+		padding-top: 52px;
+		font-size: 16px;
+	}
+}
+.stop-scroll{
+	@include stop-scroll;
+}
+
+$gutter:12px;
+$gutter-sm:16px;
+
+.container {
+	max-width: 1290px;
+	margin: 0 auto;
+	padding-left: $gutter;
+	padding-right: $gutter;
+	&--small{
+		max-width: 1050px;
+	}
+	// ------------media-------------
+	@include w($md){
+		max-width: 680px;
+	}
+	// ------------media-------------
+	@include w($sm){
+		padding-left: $gutter-sm;
+		padding-right: $gutter-sm;
+	}
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -$gutter;
+	margin-right: -$gutter;
+	// ------------media-------------
+	@include w($sm){
+		margin-left: -$gutter-sm;
+		margin-right: -$gutter-sm;
+	}
+}
+.col {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-right: $gutter;
+	padding-left: $gutter;
+	// ------------media-------------
+	@include w($sm){
+		padding-left: $gutter-sm;
+		padding-right: $gutter-sm;
+	}
+}
+.col-auto {
+	@extend .col;
+	flex: 0 0 auto;
+	width: auto;
+	max-width: none;
+}
+.col-1 {
+	@extend .col;
+	flex: 0 0 8.333333%;
+	max-width: 8.333333%;
+}
+
+.col-2 {
+	@extend .col;
+	flex: 0 0 16.666667%;
+	max-width: 16.666667%;
+}
+
+.col-3 {
+	@extend .col;
+	flex: 0 0 25%;
+	max-width: 25%;
+}
+
+.col-4 {
+	@extend .col;
+	flex: 0 0 33.333333%;
+	max-width: 33.333333%;
+}
+
+.col-5 {
+	@extend .col;
+	flex: 0 0 41.666667%;
+	max-width: 41.666667%;
+}
+
+.col-6 {
+	@extend .col;
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+
+.col-7 {
+	@extend .col;
+	flex: 0 0 58.333333%;
+	max-width: 58.333333%;
+}
+
+.col-8 {
+	@extend .col;
+	flex: 0 0 66.666667%;
+	max-width: 66.666667%;
+}
+
+.col-9 {
+	@extend .col;
+	flex: 0 0 75%;
+	max-width: 75%;
+}
+
+.col-10 {
+	@extend .col;
+	flex: 0 0 83.333333%;
+	max-width: 83.333333%;
+}
+
+.col-11 {
+	@extend .col;
+	flex: 0 0 91.666667%;
+	max-width: 91.666667%;
+}
+
+.col-12 {
+	@extend .col;
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+.col-md-12{
+	// ------------media-------------
+	@include w($md){
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+.hide-tablet{
+	// ------------media-------------
+	@include w($md){
+		display: none!important;
+	}
+}
+.for-mobile{
+	display: none;
+	// ------------media-------------
+	@include w($sm){
+		display: block;
+	}
+}
+.pb-8{
+	padding-bottom: 8px;
+	// ------------media-------------
+	@include w($sm){
+		padding-bottom: 12px;
+	}
+}
+.sp-1{
+	padding: 95px 0;
+	// ------------media-------------
+	@include w($md){
+		padding: 65px 0;
+	}
+	// ------------media-------------
+	@include w($sm){
+		padding: 45px 0;
+	}
+}
+
+p{
+    line-height: 1.25;
+}
+.title-1{
+    font-size: 66px;
+    font-weight: 800;
+	line-height: 1.2;
+	// ------------media-------------
+	@include w($sm){
+		font-size: 44px;
+	}
+}
+.title-2{
+    font-size: 48px;
+	font-weight: 800;
+	// ------------media-------------
+	@include w($sm){
+		font-size: 28px;
+	}
+}
+.title-3{
+    font-size: 34px;
+	font-weight: 800;
+	// ------------media-------------
+	@include w($sm){
+		font-size: 20px;
+	}
+}
+.title-4{
+    font-size: 22px;
+	font-weight: 800;
+	// ------------media-------------
+	@include w($sm){
+		font-size: 20px;
+	}
+}
+
+// 66 title-1
+// 48 title-2
+// 34 title-3
+// 22 title-4
+
+// 14 
+// 18
+// 16
+// 26
+
+.link{
+	font-weight: 600;
+	transition: .3s;
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	// ------------off hover-------------
+	@include offHoverOnDevices{
+		&:hover{
+			color: $blue;
+			text-decoration-color: currentColor;
+		}
+	}
+}
+.btn{
+	font-weight: 600;
+	font-size: 16px;
+	color: $blue;
+	height: 44px;
+	padding: 0 16px;
+	border-radius: 16px;
+	transition: .3s;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: #F3F3FF;
+	&:hover{
+		background: darken(#F3F3FF, 5);
+	}
+	&-blue{
+		color: #fff;
+		background: $blue;
+		&:hover{
+			background: darken($blue, 5);
+		}
+	}
+	&:disabled{
+		background-color: rgba($blue,.2)
+	}
+}
+

@@ -1,0 +1,13 @@
+@import "mixins";
+@import "fonts";
+@import "vendor";
+@import "vars";
+@import "settings";
+@import "global";
+
+@import "components/header";
+@import "components/footer";
+
+@import "pages/index";
+@import "pages/offer";
+@import "pages/404";

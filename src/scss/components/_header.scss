@@ -1,0 +1,10 @@
+.header{
+    background: #fff;
+    z-index: 100;
+}
+.header-row{
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

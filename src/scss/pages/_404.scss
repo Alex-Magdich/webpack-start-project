@@ -1,0 +1,13 @@
+.section-404{
+    min-height: calc(100vh - 75px - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__inner{
+        img{
+            margin: 0 auto;
+            margin-bottom: 48px;
+        }
+        text-align: center;
+    }
+}
