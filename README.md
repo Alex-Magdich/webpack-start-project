@@ -10,7 +10,7 @@ $ npm install
 
 ### Для разработки локально
 ```
-$ npm run serve
+$ npm run dev
 ```
 
 ### Для сборки 
